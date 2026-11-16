@@ -1,6 +1,6 @@
 # Training
 
-###Linux Commands (1.Basic Linux Commands 2.File and Directory Management)
+### Linux Commands (1.Basic Linux Commands 2.File and Directory Management)
 MAN COMMAND_NAME: The man command stands for Manual. It is used to display the manual or documentation of Linux Commands, explaining how they work, their option and their usage.
 -h(human readable): Displays file sizes in easy-to-read format.
 -a(All): Displays all file files, including hidden files.
@@ -26,7 +26,7 @@ MAN COMMAND_NAME: The man command stands for Manual. It is used to display the m
 19. locate - Quickly searches for files by name.
 20. nano - Opens a simple terminal-based text editor.
 
-###Git & Github Commands
+### Git & Github Commands
 1.Basic Git Commands
 git --version: Displays the installed Git versions.
 git config: Configures git username, email and other settings.
