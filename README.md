@@ -1,6 +1,6 @@
 # Training
 
-### Linux Commands (1. Basic Linux Commands 2. File and Directory Management)
+### Linux Commands (Basic Linux Commands & File and Directory Management)
 MAN COMMAND_NAME: The man command stands for Manual. It is used to display the manual or documentation of Linux Commands, explaining how they work, their option and their usage.<br>
 -h(human readable): Displays file sizes in easy-to-read format.<br>
 -a(All): Displays all file files, including hidden files.
