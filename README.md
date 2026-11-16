@@ -2,8 +2,8 @@
 
 ### Linux Commands (1.Basic Linux Commands 2.File and Directory Management)
 MAN COMMAND_NAME: The man command stands for Manual. It is used to display the manual or documentation of Linux Commands, explaining how they work, their option and their usage.
--h(human readable): Displays file sizes in easy-to-read format.
--a(All): Displays all file files, including hidden files.
+ -h(human readable): Displays file sizes in easy-to-read format.
+ -a(All): Displays all file files, including hidden files.
 
 1. cd - Used to change or navigate between directories.
 2. ls - Lists files and directories in the current directory.
