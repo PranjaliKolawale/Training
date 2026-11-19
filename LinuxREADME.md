@@ -13,7 +13,7 @@
 6. rm - Removes files or directories.
 7. cp - Copy filesor directories.
 8. mv - Move or rename files.
-9. ln - Create links.
+9. ln - Create links. *
 10. tree - Show directory structure.
 11. pwd - Displays the current working directory path.
 
@@ -34,7 +34,7 @@
 22. locate - Quickly searches for files by name.
 23. grep - Search for text patterns.
 
-### D. Text Processing
+### D. Text Processing *
 24. sed - Replace or modify text patterns.
 25. awk - Process and analyze text.
 26. sort - Sort file content.
@@ -43,9 +43,9 @@
 29. tee - Output to terminal and file.
 
 ### E. Compression and Extraction
-30. zip - Compress files into ZIP archives.
-31. unzip - Extract ZIP archives.
-32. tar - Create and extract archives.
+30. zip - Compress files into ZIP archives. (zip archive_name.zip file_name)
+31. unzip - Extract ZIP archives. (unzip filename.zip)
+32. tar - Create and extract archives. (tar -cvf name.tar file_name - Creating| tar -xvf filename.tar - Extracting)
 
 ### F. Permission and Ownership
 33. sudo -	Run command as administrator.
@@ -70,13 +70,13 @@
 46. ping - Test network connectivity
 47. wget - Download files from the web.
 48. curl - transfer data via URL.
-49. scp - Copy files over SSH.
-50. rsync - Synchronize files between locations.
+49. scp - Copy files over SSH.(scp source destination)
+50. rsync - Synchronize files between locations. (rsync -av source destination)
 51. ip - Manage network settings.
 52. netstat - Show network connections.
-53. traceroute - Trace network packet path.
-54. nslookup - Query DNS records.
-55. dig - Detailed DNS lookup.
+53. traceroute - Trace network packet path. (traceroute hostname/IP)
+54. nslookup - Query DNS records. (nslookup hostname/IP)
+55. dig - Detailed DNS lookup. (dig [options] domain [record_type]) (example: dig google.com MX)
 
 ### J. Package management
 56. apt - Manage packages on ubuntu and debian.
@@ -85,21 +85,7 @@
 ### K. General terminal utilities
 58. history - Show command history.
 59. man - Show command manual.
-60. alias - Create command shortcut.
-61. unalias - Remove command shortcut.
+60. alias - Create command shortcut. (alias alias_name='command')
+61. unalias - Remove command shortcut. (unalias alias_name)
 62. cal - Display calender.
 
-
-## Git & Github Commands
-
-### A.Basic Git Commands
-1. git --version: Displays the installed Git versions.
-2. git config: Configures git username, email and other settings.
-3. git init: Initializes a new Git repository.
-4. git status: Displays a current status of the working directory.
-5. git add: Adds files to staging area.
-6. git commit: Saves stagged changes to the local repository.
-7. git log: Displays the commit history.
-8. git diff: Shows changes made to files.
-
-### B. Github repository Commands
