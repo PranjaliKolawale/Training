@@ -30,14 +30,14 @@ can execute. Without the shell, the system cannot understand human-readable comm
 1. Command line shell
 2. Graphical shell
 
-Command Line Shell(CLI- Based Shell)
+Command Line Shell(CLI- Based Shell)<br>
 A shell is accessed through a command-line interface (CLI), such as Terminal in linux/macOS or Command Prompt in windows. Users enters commands like ls and cat, and their output is displayed on the terminal.
 1. ls -l displays files and directories with detailed information such as permission, ownership, size , and modification date.
 2. CLI allows users to execute commands efficiently.
 3. Multiple commands can be stored in a file and executed together.
 4. These files can be called batch files in windows and shell scripts in Linux/macOS, helping automate repetitive tasks.
 
-Graphical Shell
+Graphical Shell<br>
 A graphical shell allows users to interact with the system through a Graphical User Interface(GUI). Instead of typing commands, users performs actions by clicking icons, opening windows and using menus.
 1. Window-based program management.
 2. Drag and drop file handeling.
