@@ -6,29 +6,31 @@ Postgresql is an open-source relational database management system (RDBMS) that 
 - Used by banking, e-commerce, healthcare, and enterprise applications to manage large volumes of data securely.
 
 # Data Types of PostgreSQL
-1. Numeric Types: Integer, BIG INT, DECIMAL - Store numeric values
-2. Character Types: VARCHAR, TEXT - Store text and strings
-3. Date and Time Types: DATE, TIMESTAMP - Store date and time values
-4. Boolean Type: Boolean - Store TRUE, FALSE or NULL
-5. JSON Types: JSON, JSONB - Store JSON documents
+| Category | Data Types | Description |
+|----------|------------|-------------|
+| Numeric Types | Integer, BIG INT, DECIMAL | Store numeric values |
+| Character Types | VARCHAR, TEXT | Store text and strings |
+| Date and Time Types | DATE, TIMESTAMP | Store date and time values |
+| Boolean Type | Boolean | Store TRUE, FALSE or NULL |
+| JSON Types | JSON, JSONB | Store JSON documents |
 
 # Basic SQL operations in PostgreSQL
 ### 1. Create the table
-'''
+```
 CREATE TABLE products (product_id INT PRIMARY KEY, product_name VARCHAR(100), price NUMERIC);
-'''
+```
 
 ### 2. Insert the data
 Adds a new record to the table.
-'''
+```
 INSERT INTO products (product_id, product_name, price) VALUES (1, 'Laptop', 999.99)
-'''
+```
 
 ### 3. Query Data
 Retrieves records from the table.
-'''
+```
 SELECT * FROM products
-'''
+```
 
 ### Working PostgreSQL
 - Stores data in tables using a row-based structure.
