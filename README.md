@@ -1,4 +1,4 @@
-# Linux Shell and Shell Scriptingwith detailed 
+# Linux Shell and Shell Scripting with detailed 
 In Linux systems, A shell acts as an interface between the user and Linux kernel, interpreting and executing commands. Shell scripting combines multiple commands into a single file to automate tasks.
 1. Foundation of Linux command-line interaction.
 2. Automates repetitive tasks.
