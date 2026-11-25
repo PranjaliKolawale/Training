@@ -14,23 +14,6 @@ Postgresql is an open-source relational database management system (RDBMS) that 
 | Boolean Type | Boolean | Store TRUE, FALSE or NULL |
 | JSON Types | JSON, JSONB | Store JSON documents |
 
-# Basic SQL operations in PostgreSQL
-### 1. Create the table
-```
-CREATE TABLE products (product_id INT PRIMARY KEY, product_name VARCHAR(100), price NUMERIC);
-```
-
-### 2. Insert the data
-Adds a new record to the table.
-```
-INSERT INTO products (product_id, product_name, price) VALUES (1, 'Laptop', 999.99)
-```
-
-### 3. Query Data
-Retrieves records from the table.
-```
-SELECT * FROM products
-```
 
 ### Working PostgreSQL
 - Stores data in tables using a row-based structure.
@@ -54,3 +37,26 @@ SELECT * FROM products
 3. Financial Systems: Supports Banking and Financial applications with strong transaction management.
 4. Geographic Information Systems (GIS): Handles spatial and location-based data using PostGIS.
 5. Web Applications: Powers dynamic websites and web services.
+
+# Basic SQL operations in PostgreSQL
+### 1. Create the table
+```
+CREATE TABLE Currency (
+    CurrencyCode CHAR(3) NOT NULL,
+    Name VARCHAR(100) NOT NULL,
+    ModifiedDate TIMESTAMP NOT NULL DEFAULT NOW()
+);
+```
+
+### 2. Insert the data
+Adds a new record to the table.
+```
+INSERT INTO Currency (CurrencyCode, Name, ModifiedDate) VALUES ('AED'	'Emirati Dirham'	'2019-04-30 00:00:00')
+```
+
+### 3. Query Data
+Retrieves records from the table.
+```
+SELECT * FROM Currency
+```
+
