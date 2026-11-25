@@ -358,6 +358,31 @@ Output:
 0
 512
 ```
+### Keywords
+| Category | Keywords |
+|----------|----------|
+| Value Keywords | True, False, None |
+| Conditional Keywords | if, elseif, else |
+| Looping Keywords | for, while, break, continue, pass |
+| Logical and Looping Keywords | and, or, not, in, is |
+| Function Keywords | def, return, lambda, yield |
+| Class and Object Keywords | class, del |
+| Exception Handelling Keyword | try, except, finally, raise, assert |
+| Module and Import Keywords | import, from, as |
+| Scope Management Keywords | global, nonlocal |
+| Asynchronous Programming Keywords | async, await |
+| Context Management Keywords | with |
+
+##### Difference Between Keywords, Variables and Identifiers in Python
+| Basis | Keywords | Variables | Identifiers |
+|-------|----------|-----------|-------------|
+| Definition | Reserved words that have predefined meanings in Python | Names used to store or refer to data in a program. | Names used to identify variables, functions, classes, etc. |
+| Purpose | Define the syntax and structure of python programs. | Hold references to value or objects. | Provide unique names to programming elements within their scope. |
+| Creation | Predefined by Python. | Created by assigning values. | Defined by the programmer. |
+| Modification | Cannot be redefined as ordinary identifiers. | Can refer to differnt values during program execution. | Names are assigned when programming elements are defined. |
+| Naming Rules | Must be used according to Python's Syntax. | Must follow Python's Identifier naming rules. | Must follow Python's naming rules and cannot be keywords. |
+| Examples | if, else, for, while, class, def | age, name, salary, marks | age, calculate_sum, Student, student_name |
+
 
 
 
