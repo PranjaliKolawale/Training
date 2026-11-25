@@ -51,7 +51,7 @@ CREATE TABLE Currency (
 ### 2. Insert the data
 Adds a new record to the table.
 ```
-INSERT INTO Currency (CurrencyCode, Name, ModifiedDate) VALUES ('AED'	'Emirati Dirham'	'2019-04-30 00:00:00')
+INSERT INTO Currency (CurrencyCode, Name, ModifiedDate) VALUES ('AED', 'Emirati Dirham', '2019-04-30 00:00:00');
 ```
 
 ### 3. Query Data
