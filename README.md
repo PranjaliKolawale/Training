@@ -3,7 +3,7 @@ Postgresql is an open-source relational database management system (RDBMS) that 
 - Designed to manage structured data with high reliability and cosistency.
 - Supports advanced SQL features, transactions, indexes, and stored procedures.
 - Handles relational, JSON, array, and custom data types efficiently.
-- Used by banking, e-commerce, healthcare, and enterprise applications to manage large volumes of data securely.
+- Used by banking, e-commerce, healthcare, and enterprise applications to manage large volumes of data securely. 
 
 # Data Types of PostgreSQL
 | Category | Data Types | Description |
