@@ -1018,7 +1018,7 @@ The NOT NULL constraint in PostgreSQL ensures that a column always contains a va
 
 ```
 ALTER TABLE FK_Practice.BusinessEntity
-ALTER COLUMN EntityName SET NOT NULL;
+ALTER COLUMN EntityName SET NOT NULL; 
 ```
 
 
