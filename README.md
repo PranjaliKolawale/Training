@@ -1021,14 +1021,271 @@ ALTER TABLE FK_Practice.BusinessEntity
 ALTER COLUMN EntityName SET NOT NULL; 
 ```
 
+### JOINS
+PostgreSQL JOIN combines rows from two or more tables based on a related column. It helps in:
+
+- Matching records using common columns.
+- Simplifying data retrieval from relational databases.
+- Creating meaningful result sets by combining information from different tables.
+
+##### Types of JOINS
+1. INNER JOIN
+- Retrieving only matching records from both tables.
+- Combining related data using a common column.
+- Excluding rows without matching values.
+- Maintaining accurate relationships between tables.
+
+2. LEFT JOIN
+LEFT JOIN returns all rows from the left table and matching rows from the right table. It helps in:
+
+- Returning all records from the left table.
+- Displaying matching records from the right table.
+- Showing NULL values when no matching record exists.
+- Retrieving complete data from the left table.
+
+3. RIGHT JOIN
+RIGHT JOIN returns all rows from the right table and the matching rows from the left table. It helps in:
+
+- Returning all records from the right table.
+- Displaying matching records from the left table.
+- Showing NULL values where no match exists.
+- Retrieving complete data from the right table.
+
+4. FULL JOIN
+FULL JOIN combines the results of both LEFT JOIN and RIGHT JOIN. It helps in:
+
+- Returning all rows from both tables.
+- Displaying matching records from both tables.
+- Showing NULL values where no match exists.
+- Retrieving complete information from both tables.
+
+5. NATURAL JOIN
+A NATURAL JOIN automatically joins two tables based on columns having the same name and compatible data types. It returns only the rows where the common column values match.
+
+- Automatically joining tables using common column names.
+- Returning matching rows from both tables.
+- Displaying the common column only once in the result.
+- Reducing the need to specify the join condition explicitly.
+
+`##### 1. LEFT JOIN
+The LEFT JOIN in PostgreSQL returns all rows from the left table and the matching rows from the right table. If no matching row exists in the right table, the result contains NULL values for the right table columns. The LEFT JOIN helps in:
+
+- Returning all records from the left table.
+- Retrieving matching records from the right table.
+- Displaying NULL values when no matching record exists.
+- Finding records with or without related data.
+
+LEFT JOIN with WHERE Clause
+##### 2. INNER JOIN
+The INNER JOIN in PostgreSQL returns only the rows that have matching values in both tables based on a common column.
+
+- Retrieve related information from multiple tables.
+- Filter out rows without matching values.
+- Produce combined results for analysis and reporting.
+
+##### 3. FULL OUTER JOIN
+The PostgreSQL FULL OUTER JOIN combines rows from two tables based on a common column.
+
+- Returns all records from both tables.
+- Displays NULL for unmatched rows.
+- Combines matching records into a single result.
+
+##### 4. SELF JOIN
+The SELF JOIN in PostgreSQL is a regular join where a table is joined with itself. It is commonly used when rows within the same table are related to each other, such as employees and their managers or products and their parent products. The SELF JOIN helps in:
+
+- Joining a table with itself.
+- Retrieving related records from the same table.
+- Comparing rows within a single table.
+- Representing hierarchical relationships such as employees and managers.
+
+SELF JOIN with WHERE Clause
+
+##### 5. Schema
+A PostgreSQL schema is a logical container that organizes database objects such as tables, views, indexes, functions and sequences within a database. It helps group related objects and manage them efficiently.
+
+- Stores related database objects in a single namespace.
+- Enables better control over user access and permissions.
+
+1. Create a Schema
+2. Create a Table in a Schema
+3. Retrieve Data from a Schema Table
+4. Drop a Schema
 
 
+###### 1. CREATE SCHEMA
+The CREATE SCHEMA statement in PostgreSQL is used to create a new schema within a database. It provides a logical container for organizing database objects and managing them efficiently.
+
+- Creates a new schema in the current database.
+- Groups related database objects under a single namespace.
+
+A. Create a New Schema
+B. Create a Table Inside a Schema
+C. Retrieve Data from a Schema Table
+D. Create a Schema with AUTHORIZATION
 
 
+###### 2. DROP SCHEMA
+The DROP SCHEMA statement in PostgreSQL is used to remove an existing schema from a database. A schema can only be dropped if it is empty unless the CASCADE option is used, which removes the schema along with all the objects it contains. The DROP SCHEMA statement allows users to:
 
+- Delete an empty schema using the default behavior.
+- Remove a schema and all dependent objects using CASCADE.
+- Prevent accidental deletion of dependent objects using RESTRICT.
 
+A. Drop an Empty Schema
+B. Drop a Non-Empty Schema
+C. Drop a Schema Using CASCADE
+D. Drop a Schema Using RESTRICT
 
+###### 3. ALTER SCHEMA
+The ALTER SCHEMA statement in PostgreSQL is used to modify the properties of an existing schema. The ALTER SCHEMA statement allows users to:
 
+- Rename an existing schema.
+- Change the ownership of a schema.
+- Manage schema properties without affecting its objects.
+- Simplify database administration and maintenance.
+
+A. Rename a Schema
+B. Verify the Renamed Schema
+C. Change the Schema Owner
+D. Create a Table in the Renamed Schema
+
+### Functions
+- PostgreSQL allows developers to create user-defined functions to encapsulate reusable logic, making database operations more efficient and modular. The CREATE FUNCTION statement is used to define a new function, supporting various procedural languages, with plpgsql being the most commonly used in PostgreSQL.
+
+###### Function Overloading
+Function overloading occurs when more than one function shares the same name but has different parameters. PostgreSQL supports this feature, allowing you to define multiple versions of a function that can handle different types of input. This is particularly useful when you need to perform similar operations with varying inputs.
+
+###### Drop Function
+
+###### MAX Function
+The MAX() function in PostgreSQL returns the highest value from a column. It can be used with numeric, date and text data types. MAX() ignores NULL values.
+
+- Retrieve the latest date or maximum text value.
+- Use with GROUP BY to find the maximum value for each group.
+
+###### MIN Function
+MIN() function in PostgreSQL is an aggregate function that returns the smallest value from a set of values in a column. It can be used with numeric, date and text data types and is commonly used with the GROUP BY clause.
+
+- Retrieve the earliest date from a dataset.
+- Determine the minimum value for each group.
+- Summarize data using aggregate queries.
+
+##### SUM Function
+The SUM() function in PostgreSQL returns the total of all non-NULL values in a numeric column. It is commonly used to calculate totals for numeric data.
+
+- Calculate the total value of a numeric column.
+- Find the sum of values for specific groups using GROUP BY.
+- Generate summary reports from numeric data.
+
+##### COUNT Function
+The COUNT() function in PostgreSQL is an aggregate function that returns the number of rows or non-NULL values in a column. It is commonly used to count records in a table and can be combined with clauses such as WHERE, GROUP BY and HAVING. The COUNT() function helps users to:
+
+- Count the total number of rows in a table.
+- Count records that satisfy a specific condition.
+- Use with GROUP BY and HAVING to summarize data.
+
+##### EXTRACT Function
+PostgreSQL EXTRACT() function retrieves a specific part of a date, time or timestamp value, such as the year, month, day, hour or minute. It is commonly used for date and time analysis in SQL queries. Supports filtering, grouping and analyzing date and time data in SQL queries.
+
+##### REPLACE() Function
+REPLACE() function in PostgreSQL replaces all occurrences of a specified substring within a string with another substring.
+
+- Modify text values without changing the original data.
+- Clean and format string data.
+- Update repeated text efficiently.
+
+##### Block Structure
+A block in PostgreSQL is the basic unit of a PL/pgSQL program. It contains declarations, executable statements and optional exception handling. Blocks are commonly used in anonymous blocks, functions, procedures and triggers.
+
+- Organize PostgreSQL code into logical sections.
+- Declare variables and constants within a block.
+- Execute multiple statements together.
+- Handle runtime errors using exception blocks.
+
+1. Basic Block Structure
+2. Block with Variables and Calculations
+3. Block with Exception Handling
+
+##### Variables
+Variables in PostgreSQL are used to store and manage data temporarily within a block. They support different data types and make database programs more flexible and efficient.
+
+- Declare and initialize values.
+- Store query results for further processing.
+- Perform calculations and data manipulation.
+- Write cleaner and more maintainable code.
+
+1. Declare and Initialize Variables
+2. Assign a Value to a Variable
+3. Copy a Data Type Using %TYPE
+4. Variables in Nested Blocks
+
+##### Store Procedures
+A stored procedure in PostgreSQL is a database object that contains a set of SQL and procedural statements stored in the database. Stored procedures are executed using the CALL statement and can accept parameters, perform calculations, and execute SQL statements.
+
+- Reuse SQL logic across multiple operations.
+- Automate repetitive database tasks.
+- Organize complex database logic into reusable units.
+
+1. Create a Simple Stored Procedure
+2. Execute a Stored Procedure
+3. Stored Procedure with Parameters
+
+##### CREATE Trigger
+Triggers in PostgreSQL are powerful tools that allow you to automate actions in your database whenever certain events occur, like inserting, updating, or deleting data. From this article, we will better understand the CREATE TRIGGER Statement in PostgreSQL.
+
+Steps to create
+- First, create a trigger function using the CREATE FUNCTION statement.
+- Second, bind the trigger function to a table using the CREATE TRIGGER statement.
+
+##### DROP Trigger
+The DROP TRIGGER statement in PostgreSQL is essential for managing database triggers effectively. Triggers in PostgreSQL are database callbacks that automatically execute functions in response to certain events, such as INSERT, UPDATE, or DELETE. DROP TRIGGER provides database administrators and developers with control over the behavior of tables, allowing them to remove unnecessary or outdated triggers, and ensuring efficient database management.
+
+1. Creating a Function
+2. Creating a Trigger
+3. Dropping the Trigger
+
+##### Disabling a Trigger
+Triggers in PostgreSQL are powerful tools that automatically execute predefined functions whenever specific events like INSERT, UPDATE, or DELETE occur on a table. However, there are times when you may need to temporarily disable a trigger, such as during bulk inserts, data migrations, or testing phases.
+
+1. Creating a Sample Table
+2. Creating a Trigger Function
+3. Creating a Trigger
+4. Disabling the Trigger
+
+##### Enabling a Trigger
+A PostgreSQL trigger is a function that is automatically invoked whenever a specified event occurs on a table, such as an insert, update, or delete operation. Triggers are powerful tools for enforcing business rules, maintaining data integrity, and automating system tasks. PostgreSQL provides the option to enable or disable triggers as needed. When a trigger is disabled, it does not fire during the triggering event. To ensure a trigger fires, it must be enabled.
+
+##### CREATE INDEX
+The CREATE INDEX statement in PostgreSQL is used to create an index on one or more columns of a table. Indexes improve the speed of data retrieval operations, especially for queries that frequently use the WHERE, JOIN or ORDER BY clauses.
+
+- Improve query performance and Speed up data retrieval.
+- Optimize searches on frequently used columns.
+- Enhance the performance of sorting and join operations.
+
+1. Create an Index on a Single Column
+2. Create an Index on Multiple Columns
+
+##### List Indexes
+Indexes in PostgreSQL are crucial for optimizing query performance, helping speed up data retrieval by allowing faster access to rows in a table. PostgreSQL does not provide a direct SHOW INDEXES command like some other databases; however, you can use the pg_indexes view and the psql command line to list and manage indexes effectively.
+
+1. Using 'pg_indexes' view
+A. Listing Indexes by Schema
+B. Listing Indexes for a Specific Table
+
+2. Using psql command
+A. Viewing Indexes for 'customer' Table
+B. Viewing Indexes for 'film' Table
+
+##### UNIQUE Index
+UNIQUE index in PostgreSQL ensures that all values in the indexed column (or combination of columns) are unique.
+
+- Prevent duplicate values in a column.
+- Enforce data integrity and Improve query performance.
+- Create unique indexes on single or multiple columns.
+
+1. Create a UNIQUE Index on a Single Column
+2. Create a UNIQUE Index on Multiple Columns
+3. Insert a Duplicate Value
 
 
 
